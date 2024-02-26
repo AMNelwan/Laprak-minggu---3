@@ -1,0 +1,13 @@
+bulan = int(input("Masukkan nomor bulan (1-12): "))
+
+if not 1 <= bulan <= 12:
+  print("Bulan tidak valid.")
+elif bulan in (1, 3, 5, 7, 8, 10, 12):
+  print(f"Jumlah hari pada bulan {bulan} tahun 2020 adalah 31")
+elif bulan in (4, 6, 9, 11):
+  print(f"Jumlah hari pada bulan {bulan} tahun 2020 adalah 30")
+else:
+  print(f"Jumlah hari pada bulan {bulan} tahun 2020 adalah 29" if is_kabisat(2020) else 28)
+
+def is_kabisat(tahun):
+  return (tahun % 4 == 0 and (tahun % 100 != 0 or tahun % 400 == 0))
