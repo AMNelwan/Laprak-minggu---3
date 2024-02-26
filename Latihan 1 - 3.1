@@ -1,0 +1,10 @@
+try:
+    suhu = float(input("Masukkan suhu tubuh: "))
+    if suhu >= 38:
+        print("Anda demam.")
+    elif suhu >= 37:
+        print("Suhu tubuh Anda sedikit tinggi.")
+    else:
+        print("Suhu tubuh Anda normal.")
+except ValueError:
+    print("Input tidak valid. Masukkan angka.")
